@@ -1,0 +1,13 @@
+<h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+}">Incident Auto Assignment</h1>
+Issue Description: <input #myInput type="text">
+<div class="form-group">
+  <label for="power">Select Location</label>
+  <select class="form-control" id="power" required>
+    <option *ngFor="let pow of disaster_types" [value]="pow">{{pow}}</option>
+  </select>
+</div>
+<button class="btn btn-primary" (click)="firstClick(myInput.value)">Submit</button>
+{{greeting}}
